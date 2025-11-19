@@ -3,3 +3,113 @@ form {
     margin-top: 0em;
     unicode-bidi: isolate;
 }
+.feature-icon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: .75rem;
+}
+.navbar-brand {
+  margin-right: 20px;      
+}
+.navbar-nav .nav-item {
+  margin-right: 25px;      
+}
+.navbar-nav .nav-item:last-child {
+  margin-right: 0;
+}
+@media (max-width:576px){
+  footer {
+  text-align: center;
+}
+footer .row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;    
+  gap: 20px;              
+}
+
+footer .col-12,
+footer .col-md,
+footer .col-6 {
+  width: 100%;
+  max-width: 300px; 
+}
+  .pb-2 {
+    text-align: center;
+  }
+  .row-cols-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .feature {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 1.5rem;
+  }
+
+  .feature-icon {
+    margin: 0 auto 0.75rem auto;
+  }
+  .icon-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+  }
+  .feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.feature .feature-icon {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.feature:nth-child(3) .feature-icon img {
+  height: 35px;
+}
+
+.feature h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.feature p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  max-width: 300px;
+}
+
+.feature a.icon-link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  text-decoration: none;
+  color: #0d6efd;
+}
+
+.feature a.icon-link img {
+  margin-left: 0.25rem;
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 576px) {
+  .feature {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+}
