@@ -1,97 +1,64 @@
-/* ----------------------------------
-   GLOBAL RESET & BODY
----------------------------------- */
-body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    min-height: 100%;
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
+/* Main container for proper layout */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-/* ----------------------------------
-   NAVBAR
----------------------------------- */
-.navbar-brand u.move {
-    text-decoration: none;
-    color: #3498db;
+/* Login Form Styles */
+.container.min-vh-100 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+  font-family: Arial, sans-serif;
 }
 
-.nav-link {
-    font-weight: 500;
+.form-signin {
+  max-width: 320px;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
-.nav-link.disabled {
-    pointer-events: none;
-    opacity: 0.5;
+.form-signin img {
+  display: block;
+  margin: 0 auto 0.75rem auto;
+  width: 60px;
+  height: 48px;
 }
 
-/* Sign in link in navbar */
-.d-flex.align-items-center.gap-3 a {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    text-decoration: none;
-    color: #495057;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
+.form-signin h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
-.d-flex.align-items-center.gap-3 a:hover {
-    color: #007bff;
-    background-color: #f8f9fa;
-    transform: translateY(-2px);
+.form-floating input {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
 }
 
-.d-flex.align-items-center.gap-3 a span {
-    font-weight: 600;
+.btn {
+  padding: 0.5rem 0;
+  font-size: 0.875rem;
 }
 
-/* ----------------------------------
-   HERO SECTION
----------------------------------- */
-.px-4.pt-5.my-5.text-center.border-bottom {
-    background: #ffffff;
+.form-check-label {
+  font-size: 0.875rem;
 }
 
-.px-4.pt-5.my-5.text-center.border-bottom h1 {
-    margin-bottom: 1rem;
+p.text-center a {
+  font-size: 0.875rem;
 }
 
-.px-4.pt-5.my-5.text-center.border-bottom p {
-    font-size: 1rem;
-    color: #555;
+p.text-body-secondary {
+  font-size: 0.75rem;
+  margin-top: 1rem;
 }
 
-/* ----------------------------------
-   FEATURE SECTION
----------------------------------- */
-#featured-3 .feature-icon {
-    background: none;
-    padding: 0;
-}
-
-#featured-3 .feature h3 {
-    margin-top: 0.5rem;
-}
-
-/* ----------------------------------
-   OFFERS CARDS
----------------------------------- */
-.f .card {
-    border-radius: 1rem;
-}
-
-.f .card-header {
-    text-align: center;
-}
-
-/* ----------------------------------
-   FOOTER
----------------------------------- */
 footer {
   font-family: 'Inter', 'SF Pro Display', system-ui, sans-serif;
   color: #6b7280;

@@ -1,52 +1,265 @@
-body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      background-color: #f8f9fa;
-      font-family: Arial, sans-serif;
-    }
+/* Main container for proper layout */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
+/* Login Form Styles */
+.container.min-vh-100 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+.form-signin {
+    max-width: 320px;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-signin img {
+    display: block;
+    margin: 0 auto 0.75rem auto;
+    width: 60px;
+    height: 48px;
+}
+
+.form-signin h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.form-floating input {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+}
+
+.btn {
+    padding: 0.5rem 0;
+    font-size: 0.875rem;
+}
+
+.form-check-label {
+    font-size: 0.875rem;
+}
+
+p.text-center a {
+    font-size: 0.875rem;
+}
+
+p.text-body-secondary {
+    font-size: 0.75rem;
+    margin-top: 1rem;
+}
+
+/* Footer Styles */
+footer {
+    font-family: 'Inter', 'SF Pro Display', system-ui, sans-serif;
+    color: #6b7280;
+    position: relative;
+    margin-top: auto;
+}
+
+/* Animated gradient border with glow */
+footer .border-top {
+    border: none !important;
+    position: relative;
+}
+
+footer .border-top::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        #8b5cf6 25%, 
+        #06b6d4 50%, 
+        #8b5cf6 75%, 
+        transparent 100%);
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+    animation: borderFlow 4s ease-in-out infinite;
+}
+
+@keyframes borderFlow {
+    0%, 100% { 
+        opacity: 0.7; 
+    }
+    50% { 
+        opacity: 1; 
+    }
+}
+
+/* Floating headings with gradient text */
+footer h5 {
+    background: linear-gradient(135deg, #1e293b 0%, #475569 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 1.15rem;
+    font-weight: 800;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.025em;
+    position: relative;
+    display: inline-block;
+    transform: translateY(0);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+footer .col-md:hover h5 {
+    transform: translateY(-2px);
+    text-shadow: 0 5px 15px rgba(99, 102, 241, 0.1);
+}
+
+/* Futuristic links with icon reveal */
+footer a {
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    padding-left: 0;
+    display: block;
+    border-radius: 6px;
+    margin: 2px 0;
+    text-decoration: none;
+}
+
+footer a::before {
+    content: '→';
+    position: absolute;
+    left: -20px;
+    opacity: 0;
+    color: #8b5cf6;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    transform: translateX(-10px);
+}
+
+footer a:hover {
+    color: #1e293b !important;
+    transform: translateX(12px);
+    padding-left: 8px;
+    background: linear-gradient(90deg, rgba(139, 92, 246, 0.05) 0%, transparent 100%);
+}
+
+footer a:hover::before {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Logo with subtle pulse animation */
+footer img {
+    filter: grayscale(0.3) brightness(1.1);
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transform: scale(1);
+}
+
+footer img:hover {
+    filter: grayscale(0) brightness(1.2);
+    transform: scale(1.1) rotate(5deg);
+    animation: logoPulse 2s ease-in-out infinite;
+}
+
+@keyframes logoPulse {
+    0%, 100% { 
+        transform: scale(1.1) rotate(5deg); 
+    }
+    50% { 
+        transform: scale(1.15) rotate(5deg); 
+    }
+}
+
+/* Copyright with subtle glow */
+footer small {
+    font-size: 0.875rem;
+    color: #9ca3af;
+    position: relative;
+    padding: 4px 12px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+footer small:hover {
+    color: #6b7280;
+    text-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+}
+
+/* Column hover effects */
+footer .col-md {
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    padding: 12px 16px;
+    margin: -12px -16px;
+}
+
+footer .col-md:hover {
+    transform: translateY(-2px);
+}
+
+/* List items with staggered animation */
+footer .list-unstyled li {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+footer .list-unstyled li:nth-child(1) { 
+    animation-delay: 0.1s; 
+}
+footer .list-unstyled li:nth-child(2) { 
+    animation-delay: 0.2s; 
+}
+footer .list-unstyled li:nth-child(3) { 
+    animation-delay: 0.3s; 
+}
+footer .list-unstyled li:nth-child(4) { 
+    animation-delay: 0.4s; 
+}
+footer .list-unstyled li:nth-child(5) { 
+    animation-delay: 0.5s; 
+}
+footer .list-unstyled li:nth-child(6) { 
+    animation-delay: 0.6s; 
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive enhancements */
+@media (max-width: 768px) {
+    footer .col-md {
+        margin: 4px 0;
+        padding: 8px 12px;
+    }
+    
+    footer a:hover {
+        transform: translateX(8px);
+    }
+    
+    /* Adjust form for mobile */
     .form-signin {
-      max-width: 320px; /* smaller width */
-      padding: 1.5rem;  /* less padding */
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        margin: 1rem;
+        padding: 1rem;
     }
-
-    .form-signin img {
-      display: block;
-      margin: 0 auto 0.75rem auto; /* smaller margin */
-      width: 60px;
-      height: 48px;
+    
+    .container.min-vh-100 {
+        height: auto;
+        min-height: 100vh;
+        padding: 1rem 0;
     }
-
-    .form-signin h1 {
-      text-align: center;
-      font-size: 1.5rem; /* smaller font */
-      margin-bottom: 1rem;
-    }
-
-    .form-floating input {
-      padding: 0.5rem 0.75rem; /* smaller input height */
-      font-size: 0.875rem; /* smaller text */
-    }
-
-    .btn {
-      padding: 0.5rem 0; /* smaller button height */
-      font-size: 0.875rem;
-    }
-
-    .form-check-label {
-      font-size: 0.875rem;
-    }
-
-    p.text-center a {
-      font-size: 0.875rem;
-    }
-
-    p.text-body-secondary {
-      font-size: 0.75rem;
-      margin-top: 1rem;
-    }
+}
