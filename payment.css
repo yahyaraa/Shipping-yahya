@@ -361,3 +361,29 @@ footer .list-unstyled a:hover::before {
         font-size: 0.9rem;
     }
 }
+.navbar-brand u.move {
+    text-decoration: none;
+    color: #3498db;
+}
+
+.nav-link {
+    font-weight: 500;
+}
+
+.nav-link.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+/* Sign in link in navbar */
+.d-flex.align-items-center.gap-3 a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: #495057;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
